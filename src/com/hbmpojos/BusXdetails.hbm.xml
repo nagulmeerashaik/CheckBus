@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 15 Dec, 2015 1:12:09 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.hbmpojos.BusXdetails" table="BusXDetails" catalog="checkbus">
+        <id name="serviceNo" type="int">
+            <column name="ServiceNo" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="string">
+            <column name="Name" length="50" />
+        </property>
+        <property name="type" type="string">
+            <column name="type" length="50" />
+        </property>
+        <property name="arrTime" type="time">
+            <column name="arr_time" length="0" />
+        </property>
+        <property name="depTime" type="time">
+            <column name="dep_time" length="0" />
+        </property>
+        <property name="durationHrs" type="string">
+            <column name="duration_hrs" length="10" />
+        </property>
+        <property name="fare" type="java.lang.Integer">
+            <column name="fare" />
+        </property>
+        <property name="avblSeats" type="java.lang.Integer">
+            <column name="avbl_seats" />
+        </property>
+    </class>
+</hibernate-mapping>

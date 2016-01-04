@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   	<bean id="busDataBean" class="hbmpojos.BusXDetails"></bean>
+	<bean id="mainDataBean" class="com.bus.beans.MainDataBean" scope="singleton">
+		<property name="AbhiUrl" value="http://www.abhibus.com/"></property>
+		<property name="RTCUrl" value="http://www.apsrtconline.in/oprs-web/"></property>
+	</bean>
+	<bean id="privateDataHandler" class="com.bus.handlers.PrivateDataHandler"></bean>
+	<bean id="rtcDataHandler" class="com.bus.handlers.RTCDataHandler"></bean>
+	<bean id="abhiBusDataImpl" init-method="loadPage" class="com.bus.impl.AbhiBusDataImpl"></bean>
+	<bean id="redBusDataImpl" class="com.bus.impl.RedBusDataImpl"></bean>
+	<bean id="clientFactory" init-method="getWebClient" class="com.bus.handlers.ClientFactory"
+		scope="singleton"></bean>
+		<bean id="apsrtcImpl" init-method="loadPage" class="com.bus.impl.APSRTCDataImpl"></bean>
+</beans>

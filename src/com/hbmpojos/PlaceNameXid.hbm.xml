@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 15 Dec, 2015 1:12:09 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.hbmpojos.PlaceNameXid" table="PlaceNameXID" catalog="checkbus">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="placeName" type="string">
+            <column name="place_name" length="50" />
+        </property>
+        <property name="apsrtcId" type="java.lang.Integer">
+            <column name="apsrtc_id" />
+        </property>
+        <property name="tsrtcId" type="java.lang.Integer">
+            <column name="tsrtc_id" />
+        </property>
+        <property name="abhibusId" type="java.lang.Integer">
+            <column name="abhibus_id" />
+        </property>
+    </class>
+</hibernate-mapping>
